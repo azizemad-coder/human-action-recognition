@@ -94,6 +94,68 @@ python app.py
 pytest -q  # Run all tests
 ```
 
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**❌ Module not found error in Colab**
+```python
+import sys
+sys.path.insert(0, '/content/human-action-recognition/src')
+```
+
+**❌ CUDA warnings (can be ignored)**
+```python
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # Suppress TensorFlow logs
+```
+
+**❌ Out of memory on GPU**
+```bash
+export CUDA_VISIBLE_DEVICES=""  # Force CPU usage
+python app.py
+```
+
+**❌ Model download fails**
+```python
+# Clear cache and retry
+import shutil
+shutil.rmtree("~/.cache/huggingface", ignore_errors=True)
+```
+
+**❌ Video processing error**
+```bash
+# Install additional codecs
+pip install opencv-python-headless
+```
+
+**❌ Permission denied (Windows)**
+```bash
+# Run as administrator or use:
+python -m pip install --user -r requirements.txt
+```
+
+### Performance Tips
+
+- **🚀 Faster inference**: Use GPU if available (auto-detected)
+- **💾 Reduce memory**: Set `torch.set_num_threads(1)` for CPU
+- **📱 Batch processing**: Process multiple images together
+- **🎥 Video optimization**: Reduce `sample_fps` for faster processing
+
+### Model Behavior Notes
+
+**🤔 Why "Texting" instead of "Sitting"?**
+The model may predict "texting" for sitting people because:
+- Both actions have similar visual cues (sitting posture, looking down)
+- Context matters - if person holds a device, it's likely texting
+- Training data may have more "texting while sitting" examples
+- This is normal behavior, not an error
+
+**💡 Tips for better accuracy:**
+- Use clear, well-lit images
+- Ensure the person is the main subject
+- Try different angles if first prediction seems off
+
 ## 📁 Project Structure
 
 ```
