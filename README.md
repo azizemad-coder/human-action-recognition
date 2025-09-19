@@ -6,7 +6,8 @@ Reference dataset: [Bingsu/Human_Action_Recognition](https://huggingface.co/data
 
 Classes (15): calling, clapping, cycling, dancing, drinking, eating, fighting, hugging, laughing, listening_to_music, running, sitting, sleeping, texting, using_laptop
 
-ملحوظة: المشروع يعتمد على موديل مدرّب مسبقًا؛ لا يوجد تدريب داخل هذا الريبو. عند التشغيل لأول مرة سيقوم بتنزيل الموديل تلقائيًا من Hugging Face.
+Note: The project is based on a pre-trained model; there is no training within this repo. When you first run it will automatically download the model from Hugging Face.
+
 
 Project structure
 
