@@ -12,7 +12,7 @@
 - **🖼️ Image & Video** - Supports both formats
 - **🌐 Web UI** - Beautiful Gradio interface
 - **⚡ CLI Tool** - Command-line interface
-- **🎯 15 Actions** - calling, clapping, cycling, dancing, drinking, eating, fighting, hugging, laughing, listening_to_music, running, sitting, sleeping, texting, using_laptop
+- **🎯 15 Actions** - `calling` • `clapping` • `cycling` • `dancing` • `drinking` • `eating` • `fighting` • `hugging` • `laughing` • `listening_to_music` • `running` • `sitting` • `sleeping` • `texting` • `using_laptop`
 
 ## 🚀 Quick Start
 
